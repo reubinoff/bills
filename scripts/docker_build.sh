@@ -1,0 +1,1 @@
+docker build -t reubinoff/bills_service:latest ../

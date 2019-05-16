@@ -1,0 +1,14 @@
+version: '3'
+
+services:
+  bills_service:
+    image: reubinoff/bills_service:latest
+    container_name: bills_service
+    volumes:
+      - .logs:/var/logs
+    ports:
+     - "8000:8080"
+  
+volumes:
+  logs:
+
