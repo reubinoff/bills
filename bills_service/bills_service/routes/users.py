@@ -9,3 +9,6 @@ class Users(Resource):
 
 
 api.add_resource(Users, '/users')
+
+
+# https://flask-restful.readthedocs.io/en/latest/quickstart.html
