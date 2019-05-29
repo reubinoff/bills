@@ -37,37 +37,3 @@ class BaseConfig(object):
         },
     }
 
-    ENABLED_MODULES = (
-        'auth',
-
-        'users',
-        'teams',
-
-        'api',
-    )
-
-    STATIC_ROOT = os.path.join(PROJECT_ROOT, 'static')
-
-    SWAGGER_UI_JSONEDITOR = True
-    SWAGGER_UI_OAUTH_CLIENT_ID = 'documentation'
-    SWAGGER_UI_OAUTH_REALM = "Authentication for Flask-RESTplus Example server documentation"
-    SWAGGER_UI_OAUTH_APP_NAME = "Flask-RESTplus Example server documentation"
-
-    SQLALCHEMY_TRACK_MODIFICATIONS = True
-    CSRF_ENABLED = True
-
-
-class ProductionConfig(BaseConfig):
-    SECRET_KEY = os.getenv('EXAMPLE_API_SERVER_SECRET_KEY')
-    SQLALCHEMY_DATABASE_URI = os.getenv('EXAMPLE_API_SERVER_SQLALCHEMY_DATABASE_URI')
-
-
-class DevelopmentConfig(BaseConfig):
-    DEBUG = True
-
-
-class TestingConfig(BaseConfig):
-    TESTING = True
-
-    # Use in-memory SQLite database for testing
-    SQLALCHEMY_DATABASE_URI = 'sqlite://'

@@ -12,8 +12,5 @@ RUN pip install -r requirements.txt
 #add code
 ADD . /code/
 
-
-EXPOSE 8080
-
-CMD ["gunicorn", "-b", "0.0.0.0:8080", "bills_service:app", "--log-level=debug"]
+CMD ["gunicorn", "-b", "0.0.0.0:$PORT", "bills_service:app", "--log-level=debug"]
 

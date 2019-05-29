@@ -7,7 +7,7 @@ services:
     volumes:
       - .logs:/var/logs
     ports:
-     - "8000:8080"
+     - "0.0.0.0:8055:8080"
   
 volumes:
   logs:
