@@ -12,5 +12,7 @@ RUN pip install -r requirements.txt
 #add code
 ADD . /code/
 
+ENV PORT 8080
+
 CMD ["gunicorn", "-b", "0.0.0.0:${PORT}", "bills_service:app", "--log-level=debug"]
 
