@@ -25,7 +25,7 @@ from . import routes
 
 @app.route('/')
 def hello_world():
-    return 'Yair Reubinoff'
+    return 'Yair Reubinoff' + app.config.get("MODE")
 
 
 if __name__ == '__main__':
