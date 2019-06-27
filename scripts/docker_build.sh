@@ -1,1 +1,1 @@
-docker build -t reubinoff/bills_service:latest ../
+docker build -t reubinoff/bills_service:latest ../bills_service

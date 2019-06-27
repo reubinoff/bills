@@ -11,6 +11,6 @@ RUN pip install -r requirements.txt
 
 #add code
 ADD . /code/
-
+RUN ls -l /code
 CMD gunicorn -b 0.0.0.0:$PORT bills_service:app --log-level=debug
 
