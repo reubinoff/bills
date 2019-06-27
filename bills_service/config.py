@@ -36,4 +36,3 @@ class BaseConfig(object):
             'tokenUrl': '/auth/oauth2/token',
         },
     }
-
