@@ -12,9 +12,6 @@ if environ.get(DEFAULT_CONFIG_NAME) is None:
     environ[DEFAULT_CONFIG_NAME] = "dev"
 
 app.config.from_envvar(DEFAULT_CONFIG_NAME)
-app.config.from_mapping(
-    SECRET_KEY='dev'
-)
 
 print("Running in {} mode".format(app.config.get("MODE")))
 
@@ -22,10 +19,14 @@ print("Running in {} mode".format(app.config.get("MODE")))
 from . import routes
 ########
 
+from flask_sqlalchemy import SQLAlchemy
+db = SQLAlchemy(app)
 
+from bills_service.Models.users import User
+print(User.query.all())
 @app.route('/')
 def hello_world():
-    return 'Yair Reubinoff' + app.config.get("MODE")
+    return 'Yair Reubinoff ' + app.config.get("MODE")
 
 
 if __name__ == '__main__':
