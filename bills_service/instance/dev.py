@@ -1,6 +1,9 @@
 MODE = "DEVELOPMENT"
 FLASK_SECRET_KEY = "dev"
 
+# LOGGER
+LOG_LEVEL = "DEBUG"
+
 # SQL
 # dialect+driver://username:password@host:port/database
 SQLALCHEMY_DATABASE_URI = "postgres://psql:psql@localhost:5432/bills"
